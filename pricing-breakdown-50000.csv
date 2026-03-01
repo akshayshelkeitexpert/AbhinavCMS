@@ -1,0 +1,10 @@
+#,Page / Item,Effort (days),Effort (hours),Hourly rate (₹),Amount (₹),USD (@25)
+1,Homepage,2,16,1000,16000,640
+2,Projects page,1,8,1000,8000,320
+3,Services list page,1,8,1000,8000,320
+4,Services details page,1,8,1000,8000,320
+5,About page,1,8,1000,8000,320
+6,Contact us page,2,16,1000,16000,640
+7,Newsletter (send to email),1,8,1000,8000,320
+8,Header / Footer,2,16,1000,16000,640
+Total,,11,88,1000,88000,3520

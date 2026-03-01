@@ -1,0 +1,68 @@
+<header id="header" class="header sticky-top">
+  <div class="topbar d-flex align-items-center dark-background">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:abhinavmep@outlook.com">abhinavmep&#64;outlook.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:+917588603578">+91-7588603578</a></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="https://www.abhinavmep.com" target="_blank" rel="noopener" class="twitter" title="Website"><i class="bi bi-globe"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="branding d-flex align-items-cente">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a routerLink="/" class="logo d-flex align-items-center" (click)="closeMobileNav()">
+        <img src="assets/img/original-logo.png" alt="AbhinavMEP" class="logo-img">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileNav()">Home</a></li>
+          <li><a routerLink="/about" routerLinkActive="active" (click)="closeMobileNav()">About</a></li>
+         
+          <!-- <li><a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileNav()">Services</a></li> -->
+          <li><a routerLink="/services/hvac" routerLinkActive="active" (click)="closeMobileNav()">HVAC</a></li>
+          <li><a routerLink="/services/fire-fighting" routerLinkActive="active" (click)="closeMobileNav()">Fire-Fighting</a></li>
+          <li><a routerLink="/services/electrical" routerLinkActive="active" (click)="closeMobileNav()">Electrical</a></li>
+          <li><a routerLink="/services/plumbing" routerLinkActive="active" (click)="closeMobileNav()">Plumbing</a></li>
+          <!-- <li><a routerLink="/services" routerLinkActive="active" (click)="closeMobileNav()">Services</a></li> -->
+          <!-- <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMobileNav()">Projects</a></li> -->
+          <!-- <li><a routerLink="/team" routerLinkActive="active" (click)="closeMobileNav()">Team</a></li> -->
+          <!-- <li class="dropdown">
+            <a href="#" (click)="toggleDropdown($event)"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a routerLink="/service-details" (click)="closeMobileNav()">Service Details</a></li>
+              <li><a routerLink="/project-details" (click)="closeMobileNav()">Project Details</a></li>
+              <li><a routerLink="/quote" (click)="closeMobileNav()">Quote Form</a></li>
+              <li><a routerLink="/terms" (click)="closeMobileNav()">Terms</a></li>
+              <li><a routerLink="/privacy" (click)="closeMobileNav()">Privacy</a></li>
+              <li><a routerLink="/404" (click)="closeMobileNav()">404</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" (click)="toggleDropdown($event)"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#" (click)="toggleDropdown($event)"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMobileNav()">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" (click)="toggleMobileNav()" [ngClass]="{'bi-list': !mobileNavActive, 'bi-x': mobileNavActive}"></i>
+      </nav>
+    </div>
+  </div>
+</header>

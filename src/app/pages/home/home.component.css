@@ -1,0 +1,29 @@
+/* Home page styles */
+
+/* Our Happy Clients section */
+#clients .client-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: #fff;
+  border-radius: 8px;
+  min-height: 120px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+#clients .client-logo-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+#clients .client-logo-item img {
+  max-height: 70px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition: filter 0.3s ease;
+}
+#clients .client-logo-item:hover img {
+  filter: grayscale(0%);
+}

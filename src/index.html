@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ABHINAV MEP ENGINEERS</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" type="image/png" href="assets/img/original-logo.png">
+  <link rel="apple-touch-icon" href="assets/img/original-logo.png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <!-- Vendor & app CSS loaded here so they are not part of the initial JS bundle (keeps bundle under 1 MB for low-network) -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <app-root></app-root>
+  <!-- Template vendor scripts (loaded after app for Bootstrap, AOS, Swiper, GLightbox) -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof AOS !== 'undefined') AOS.init({ duration: 600, easing: 'ease-in-out', once: true, mirror: false });
+      if (typeof GLightbox !== 'undefined') GLightbox({ selector: '.glightbox' });
+      var preloader = document.getElementById('preloader');
+      if (preloader) preloader.remove();
+      setTimeout(function() {
+        document.querySelectorAll('.init-swiper').forEach(function(el) {
+          var configEl = el.querySelector('.swiper-config');
+          if (configEl && typeof Swiper !== 'undefined') try { new Swiper(el, JSON.parse(configEl.textContent.trim())); } catch(e) {}
+        });
+      }, 800);
+    });
+  </script>
+</body>
+</html>

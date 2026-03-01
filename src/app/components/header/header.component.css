@@ -1,0 +1,13 @@
+/* Header uses template main.css */
+
+.logo .logo-img {
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+@media (min-width: 992px) {
+  .logo .logo-img {
+    max-height: 52px;
+  }
+}
