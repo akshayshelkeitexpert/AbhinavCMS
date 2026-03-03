@@ -1,0 +1,5 @@
+.project-detail-list { margin-bottom: 1rem; padding-left: 1.25rem; }
+.project-detail-list li { margin-bottom: 0.5rem; }
+.project-detail-highlights { list-style: none; padding-left: 0; margin-bottom: 1rem; }
+.project-detail-highlights li { margin-bottom: 0.5rem; }
+.project-detail-highlights li i { margin-right: 0.5rem; }
