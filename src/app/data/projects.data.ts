@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
     duration: '8 Months',
     summary: 'HVAC, Electrical, Fire Protection, Plumbing & Solar System. 160 HP Daikin VRV, office electrification, fire alarm & hydrant modification, solar integration.',
     specs: [{ icon: 'bi bi-gear', value: '160 HP VRV' }, { icon: 'bi bi-calendar-check', value: '8 Months' }],
-    image: 'assets/img/construction/project-12.webp',
+    image: 'assets/img/projects_services/Industrial & Office Integrated MEP + Solar Project.JPG.jpeg',
     badgeIcon: 'bi-lightning'
   },
   {
@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
     duration: '24/7 Testing',
     summary: 'High-precision HVAC delivering 1–2 m/s air velocity at testing rigs and ≤23°C NMT for railway compressor validation.',
     specs: [{ icon: 'bi bi-wind', value: '1–2 m/s' }, { icon: 'bi bi-thermometer-half', value: '23°C NMT' }],
-    image: 'assets/img/construction/project-1.webp',
+    image: 'assets/img/projects_services/Railway HVAC Compressor Testing Facility – Hinjewadi, Pune, Maharashtra.jpg.jpeg',
     badgeIcon: 'bi-wind'
   },
   {
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     duration: 'Fertilizers Facility',
     summary: 'Process HVAC, Chilled Water System, VRF, Industrial Ventilation & Allied Electrical Works for fertilizers manufacturing facility.',
     specs: [{ icon: 'bi bi-gear', value: 'VRF + AHUs' }, { icon: 'bi bi-building', value: 'Process HVAC' }],
-    image: 'assets/img/construction/project-10.webp',
+    image: 'assets/img/projects_services/Industrial Process HVAC & Utility Engineering Project.JPG.jpeg',
     badgeIcon: 'bi-gear'
   },
   {
@@ -87,7 +87,7 @@ export const PROJECTS: Project[] = [
     duration: '24/7 Operation',
     summary: 'GMP-oriented HVAC maintaining ≤23°C NMT for temperature-controlled pharmaceutical warehouse with 135,000 CFM air handling.',
     specs: [{ icon: 'bi bi-building', value: '135,000 CFM' }, { icon: 'bi bi-thermometer-half', value: '23°C NMT' }],
-    image: 'assets/img/construction/project-8.webp',
+    image: 'assets/img/projects_services/Pharmaceutical Warehouse HVAC Project.JPG.jpeg',
     badgeIcon: 'bi-thermometer-half'
   },
   {
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
     duration: '24/7 Operation',
     summary: 'GMP-oriented HVAC maintaining ≤23°C NMT for temperature-controlled pharmaceutical warehouse storage with 105,000 CFM air handling.',
     specs: [{ icon: 'bi bi-building', value: '105,000 CFM' }, { icon: 'bi bi-thermometer-half', value: '23°C NMT' }],
-    image: 'assets/img/construction/project-6.webp',
+    image: 'assets/img/projects_services/Pharmaceutical Warehouse HVAC Project Haryana.JPG.jpeg',
     badgeIcon: 'bi-thermometer-half'
   },
   {
@@ -111,7 +111,7 @@ export const PROJECTS: Project[] = [
     duration: '8 Months',
     summary: 'Supply & Installation of high-capacity VRF System and 3,000m chilled water piping network for mission-critical data centre cooling.',
     specs: [{ icon: 'bi bi-gear', value: '620 HP VRF' }, { icon: 'bi bi-calendar-check', value: '8 Months' }],
-    image: 'assets/img/construction/project-4.webp',
+    image: 'assets/img/projects_services/Data Centre HVAC Project.jpeg',
     badgeIcon: 'bi-gear'
   },
   {
@@ -123,7 +123,7 @@ export const PROJECTS: Project[] = [
     duration: '22 Months',
     summary: 'Design, Supply, Installation, Testing & Commissioning of Complete Cleanroom HVAC & Electrical Systems for GMP-compliant pharmaceutical manufacturing.',
     specs: [{ icon: 'bi bi-building', value: '24 AHUs' }, { icon: 'bi bi-calendar-check', value: '22 Months' }],
-    image: 'assets/img/construction/project-2.webp',
+    image: 'assets/img/projects_services/Pharmaceutical Cleanroom HVAC Project – Pithampur, Madhya Pradesh.JPG.jpeg',
     badgeIcon: 'bi-award'
   },
   {
@@ -135,7 +135,7 @@ export const PROJECTS: Project[] = [
     duration: '24 Months',
     summary: 'Integrated HVAC & MEP Execution. Complete SITC of HVAC, Electrical & Fire Protection Systems for state-of-the-art Pharmaceutical R&D Centre.',
     specs: [{ icon: 'bi bi-building', value: '22 AHUs' }, { icon: 'bi bi-calendar-check', value: '24 Months' }],
-    image: 'assets/img/construction/project-4.webp',
+    image: 'assets/img/projects_services/Pharmaceutical Research & Development Centre.JPG.jpeg',
     badgeIcon: 'bi-award'
   }
 ];

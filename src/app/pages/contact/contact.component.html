@@ -86,35 +86,47 @@
               <h3>Send Us a Message</h3>
               <p>Whether you are in a metro or anywhere across India, we are here to help. For project enquiries, quotes or general information about our pan-India MEP services, please send us a message.</p>
 
-              <form class="php-email-form">
+              <form class="php-email-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="nameInput" name="name" placeholder="Full Name" required="">
+                  <input type="text" class="form-control" id="nameInput" formControlName="name" placeholder="Full Name">
                   <label for="nameInput">Full Name</label>
+                  @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+                    <small class="text-danger">Full name is required</small>
+                  }
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="emailInput" name="email" placeholder="Email Address" required="">
+                  <input type="email" class="form-control" id="emailInput" formControlName="email" placeholder="Email Address">
                   <label for="emailInput">Email Address</label>
+                  @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                    <small class="text-danger">Valid email is required</small>
+                  }
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="subjectInput" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" id="subjectInput" formControlName="subject" placeholder="Subject">
                   <label for="subjectInput">Subject</label>
+                  @if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
+                    <small class="text-danger">Subject is required</small>
+                  }
                 </div>
 
                 <div class="form-floating mb-3">
-                  <textarea class="form-control" id="messageInput" name="message" rows="5" placeholder="Your Message" style="height: 150px" required=""></textarea>
+                  <textarea class="form-control" id="messageInput" formControlName="message" rows="5" placeholder="Your Message" style="height: 150px"></textarea>
                   <label for="messageInput">Your Message</label>
+                  @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+                    <small class="text-danger">Message is required</small>
+                  }
                 </div>
 
                 <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  @if (loading) { <div class="loading">Loading</div> }
+                  @if (errorMessage) { <div class="error-message">{{ errorMessage }}</div> }
+                  @if (submitted && !loading) { <div class="sent-message">Your message has been sent. Thank you!</div> }
                 </div>
 
                 <div class="d-grid">
-                  <button type="submit" class="btn-submit">Send Message <i class="bi bi-send-fill ms-2"></i></button>
+                  <button type="submit" class="btn-submit" [disabled]="loading">Send Message <i class="bi bi-send-fill ms-2"></i></button>
                 </div>
               </form>
             </div>
