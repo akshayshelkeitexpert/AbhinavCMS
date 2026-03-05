@@ -1,0 +1,1 @@
+pnpm exec ng build --configuration=production
