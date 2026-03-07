@@ -59,6 +59,7 @@
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li> -->
+          <li><a routerLink="/crm" routerLinkActive="active" (click)="closeMobileNav()">CRM</a></li>
           <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMobileNav()">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list" (click)="toggleMobileNav()" [ngClass]="{'bi-list': !mobileNavActive, 'bi-x': mobileNavActive}"></i>

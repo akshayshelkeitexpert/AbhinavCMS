@@ -1,0 +1,57 @@
+.crm-header {
+  background: var(--accent-color, #e03a3c);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.crm-logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.crm-logo:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.crm-nav-link {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+}
+
+.crm-nav-link:hover,
+.crm-nav-link.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.crm-user-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.crm-user-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.crm-main {
+  min-height: calc(100vh - 140px);
+}
+
+.crm-footer {
+  background: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.dropdown-menu {
+  min-width: 180px;
+}

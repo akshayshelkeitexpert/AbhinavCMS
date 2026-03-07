@@ -1,0 +1,112 @@
+/* Logo above sign-in form */
+.signin-form-logo {
+  text-align: center;
+}
+
+.signin-logo-img {
+  max-width: 180px;
+  height: auto;
+  display: inline-block;
+}
+
+/* Form labels */
+#signin .php-email-form .form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--heading-color, #1a1a1a);
+}
+
+/* Password field wrapper – match email field UI */
+#signin .signin-password-wrap {
+  position: relative;
+  display: block;
+}
+
+#signin .signin-password-wrap .form-control {
+  width: 100%;
+  padding: 14px 44px 14px 18px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+#signin .signin-password-wrap .form-control:focus {
+  outline: none;
+  border-color: var(--accent-color, #e03a3c);
+}
+
+#signin .signin-password-wrap .form-control::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+/* Ensure email input in signin matches same padding/size as quote form */
+#signin .php-email-form .form-group.signin-email-group .form-control {
+  padding: 14px 18px;
+}
+
+/* Password show/hide toggle */
+#signin .signin-password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#signin .signin-password-toggle:hover {
+  color: var(--accent-color, #e03a3c);
+}
+
+#signin .signin-password-toggle .bi {
+  font-size: 1.2rem;
+}
+
+/* Validation error under fields */
+#signin .php-email-form .form-group small.text-danger {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.875rem;
+}
+
+/* Helpful tips list in info section */
+#signin .helpful-tips ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#signin .helpful-tips li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+#signin .helpful-tips li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color, #e03a3c);
+  font-weight: bold;
+}
+
+/* Reuses quote section styles from main.css */
+#signin .php-email-form .text-muted {
+  color: var(--default-color);
+  opacity: 0.8;
+}
+
+#signin .php-email-form a.text-muted:hover {
+  opacity: 1;
+}

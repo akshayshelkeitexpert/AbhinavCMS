@@ -1,0 +1,38 @@
+<header class="crm-header">
+  <div class="container d-flex align-items-center justify-content-between py-3">
+    <a routerLink="/" class="crm-logo d-flex align-items-center">
+      <span class="sitename">Abhinav MEP</span>
+    </a>
+    <nav class="crm-nav d-flex align-items-center gap-3">
+      @if (auth.isLoggedIn()) {
+        <a routerLink="/crm/dashboard" routerLinkActive="active" class="crm-nav-link">Dashboard</a>
+        <a routerLink="/crm/contacted-list" routerLinkActive="active" class="crm-nav-link">Contacts</a>
+        <a routerLink="/crm/quotes-request" routerLinkActive="active" class="crm-nav-link">Quotes</a>
+        <div class="dropdown" [class.show]="userMenuOpen">
+          <button type="button" class="crm-user-btn dropdown-toggle" (click)="userMenuOpen = !userMenuOpen" aria-expanded="false" aria-haspopup="true">
+            {{ auth.getStoredUser()?.user_name || auth.getStoredUser()?.user_email || 'User' }}
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" [class.show]="userMenuOpen">
+            <div class="dropdown-item text-muted small">
+              {{ auth.getStoredUser()?.user_email }}
+            </div>
+            <div class="dropdown-divider"></div>
+            <button type="button" class="dropdown-item text-danger" (click)="signOut()">Sign out</button>
+          </div>
+        </div>
+      }
+    </nav>
+  </div>
+</header>
+
+<main class="crm-main">
+  <div class="container py-4">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+
+<footer class="crm-footer py-3 mt-auto">
+  <div class="container text-center text-muted small">
+    &copy; {{ currentYear }} Abhinav MEP Engineers Pvt. Ltd. &mdash; CRM
+  </div>
+</footer>

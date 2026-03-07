@@ -1,0 +1,143 @@
+<!-- Sign In Section (form left, info right) -->
+<section id="signin" class="quote section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="quote-form-container">
+          <div class="row g-0">
+            <!-- Left: Sign-in form -->
+            <div class="col-lg-6">
+              <div class="quote-form-wrapper">
+                <div class="signin-form-logo mb-3">
+                  <img src="assets/img/original-logo.png" alt="Abhinav MEP" class="signin-logo-img" />
+                </div>
+                <form class="php-email-form" [formGroup]="signinForm" (ngSubmit)="onSignIn()" data-aos="fade-right" data-aos-delay="200">
+                  <div class="form-header">
+                    <h4>Sign In to Your Account</h4>
+                    <p>Enter your email and password to access the CRM dashboard.</p>
+                  </div>
+
+                  <div class="form-group signin-email-group">
+                    <label for="crm-email">Email ID/Username</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="crm-email"
+                      formControlName="email"
+                      placeholder="Your Email or Username"
+                      [disabled]="loading"
+                    />
+                    @if (emailControl?.invalid && emailControl?.touched) {
+                      <small class="text-danger">Please enter email id.</small>
+                    }
+                  </div>
+
+                  <div class="form-group">
+                    <label for="crm-password">Password</label>
+                    <div class="signin-password-wrap">
+                      <input
+                        [type]="showPassword ? 'text' : 'password'"
+                        class="form-control"
+                        id="crm-password"
+                        formControlName="password"
+                        placeholder="Your Password"
+                        [disabled]="loading"
+                      />
+                      <button
+                        type="button"
+                        class="signin-password-toggle"
+                        (click)="showPassword = !showPassword"
+                        [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'"
+                        tabindex="-1"
+                      >
+                        <i class="bi" [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'"></i>
+                      </button>
+                    </div>
+                    @if (passwordControl?.invalid && passwordControl?.touched) {
+                      <small class="text-danger">Please enter password.</small>
+                    }
+                  </div>
+
+                  @if (errorMessage) {
+                    <div class="error-message">{{ errorMessage }}</div>
+                  }
+                  @if (loading) {
+                    <div class="loading">Signing in...</div>
+                  }
+
+                  <div class="text-center">
+                    <button type="submit" [disabled]="loading">
+                      {{ loading ? 'Signing in...' : 'Sign In' }}
+                    </button>
+                  </div>
+
+                  <p class="text-center mt-3 mb-0 small">
+                    <a routerLink="/" class="text-muted">Back to website</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <!-- Right: Helpful info -->
+            <div class="col-lg-6">
+              <div class="quote-info">
+                <div class="quote-content">
+                  <h3>Abhinav MEP CRM</h3>
+                  <p>Manage contacts, quote requests and projects in one place. Use the same email or username and password provided by your administrator.</p>
+
+                  <div class="helpful-tips mb-3">
+                    <h4 class="h6 mb-2">What you can do here</h4>
+                    <ul class="small mb-0">
+                      <li>View and manage contact form submissions from your website</li>
+                      <li>Track and respond to quote requests with project type, timeline and budget</li>
+                      <li>See dashboard counts and quick links to contacts and quotes</li>
+                      <li>Access from any device — sign in once and stay in control</li>
+                    </ul>
+                  </div>
+
+                  <div class="contact-items">
+                    <div class="contact-item" data-aos="fade-left" data-aos-delay="200">
+                      <div class="contact-icon">
+                        <i class="bi bi-telephone"></i>
+                      </div>
+                      <div class="contact-details">
+                        <h4>Call Us</h4>
+                        <p>+91-7588603578</p>
+                      </div>
+                    </div>
+
+                    <div class="contact-item" data-aos="fade-left" data-aos-delay="250">
+                      <div class="contact-icon">
+                        <i class="bi bi-envelope"></i>
+                      </div>
+                      <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>info&#64;abhinavmep.com</p>
+                      </div>
+                    </div>
+
+                    <div class="contact-item" data-aos="fade-left" data-aos-delay="300">
+                      <div class="contact-icon">
+                        <i class="bi bi-shield-lock"></i>
+                      </div>
+                      <div class="contact-details">
+                        <h4>Secure Access</h4>
+                        <p>Your data is protected</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Sign In Section -->
